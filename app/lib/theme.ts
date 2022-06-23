@@ -35,6 +35,16 @@ theme = createTheme(theme, {
       defaultProps: {
         maxWidth: '2xl',
       },
+      styleOverrides: {
+        root: {
+          [theme.breakpoints.up('lg')]: {
+            paddingLeft: theme.spacing(4),
+            paddingRight: theme.spacing(4),
+          },
+          paddingLeft: theme.spacing(3),
+          paddingRight: theme.spacing(3),
+        },
+      },
     },
   },
 } as ThemeOptions);
