@@ -31,6 +31,11 @@ theme = createTheme(theme, {
         position: 'sticky',
       },
     },
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: '2xl',
+      },
+    },
   },
 } as ThemeOptions);
 
