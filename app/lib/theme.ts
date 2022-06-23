@@ -23,6 +23,15 @@ let theme = createTheme({
   },
 });
 
-theme = createTheme(theme, {} as ThemeOptions);
+theme = createTheme(theme, {
+  components: {
+    MuiAppBar: {
+      defaultProps: {
+        color: 'inherit',
+        position: 'sticky',
+      },
+    },
+  },
+} as ThemeOptions);
 
 export default theme;
