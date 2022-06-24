@@ -148,6 +148,14 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          color: 'inherit',
+          minWidth: 48,
+        },
+      },
+    },
     MuiPaper: {
       defaultProps: {
         elevation: 0,
