@@ -89,6 +89,14 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiList: {
+      styleOverrides: {
+        padding: {
+          paddingBottom: theme.spacing(2),
+          paddingTop: theme.spacing(2),
+        },
+      },
+    },
     MuiPaper: {
       defaultProps: {
         elevation: 0,
