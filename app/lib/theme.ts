@@ -101,6 +101,18 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          '&.Mui-focusVisible': {
+            outline: `2px solid ${blue[700]}`,
+            outlineOffset: 0,
+          },
+          color: blue[700],
+          textDecoration: 'none',
+        },
+      },
+    },
     MuiList: {
       styleOverrides: {
         padding: {
