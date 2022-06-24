@@ -97,6 +97,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiListItemButton: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
     MuiPaper: {
       defaultProps: {
         elevation: 0,
