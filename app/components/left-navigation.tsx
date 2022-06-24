@@ -1,8 +1,10 @@
+import activity_history from '~/icons/activity-history.svg';
 import redemptions from '~/icons/redemptions.svg';
 import refer_a_friend from '~/icons/refer-a-friend.svg';
 import rewards from '~/icons/rewards.svg';
 import surveys from '~/icons/surveys.svg';
 
+import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import type { ListProps } from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -33,6 +35,22 @@ export default function LeftNavigation(props: ListProps) {
           <ListItemText primary={primary} />
         </ListItemButton>
       ))}
+      <Divider sx={{ my: 2 }} />
+      <ListItemButton
+        component={NavLink}
+        selected={pathname === '/activity-history'}
+        to="/activity-history"
+      >
+        <ListItemIcon>
+          <img
+            alt="Activity history icon"
+            height="24"
+            src={activity_history}
+            width="24"
+          />
+        </ListItemIcon>
+        <ListItemText primary="Activity history" />
+      </ListItemButton>
     </List>
   );
 }
