@@ -2,6 +2,7 @@ import account_details from '~/icons/account-details.svg';
 import activity_history from '~/icons/activity-history.svg';
 import arrow from '~/icons/arrow.svg';
 import my_account from '~/icons/my-account.svg';
+import my_saved_data from '~/icons/my-saved-data.svg';
 import redemptions from '~/icons/redemptions.svg';
 import refer_a_friend from '~/icons/refer-a-friend.svg';
 import rewards from '~/icons/rewards.svg';
@@ -64,7 +65,9 @@ export default function LeftNavigation(props: ListProps) {
 
 function MyAccountListItemButton() {
   const { pathname } = useLocation();
-  const [open, setOpen] = useState(pathname === '/account-details');
+  const [open, setOpen] = useState(
+    ['/account-details', '/my-saved-data'].includes(pathname)
+  );
 
   const handleToggle = () => {
     setOpen((prev) => !prev);
@@ -101,21 +104,27 @@ function MyAccountListItemButton() {
             },
           }}
         >
-          <ListItemButton
-            component={NavLink}
-            selected={pathname === '/account-details'}
-            to="/account-details"
-          >
-            <ListItemIcon>
-              <img
-                alt="Account details icon"
-                height="24"
-                src={account_details}
-                width="24"
-              />
-            </ListItemIcon>
-            <ListItemText primary="Account details" />
-          </ListItemButton>
+          {[
+            [account_details, 'Account details', '/account-details'],
+            [my_saved_data, 'My saved data', '/my-saved-data'],
+          ].map(([icon, primary, to]) => (
+            <ListItemButton
+              component={NavLink}
+              key={to}
+              selected={pathname === to}
+              to={to}
+            >
+              <ListItemIcon>
+                <img
+                  alt={`${primary} icon`}
+                  height="24"
+                  src={icon}
+                  width="24"
+                />
+              </ListItemIcon>
+              <ListItemText primary={primary} />
+            </ListItemButton>
+          ))}
         </List>
       </Collapse>
     </>
