@@ -156,6 +156,13 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiListItemText: {
+      defaultProps: {
+        primaryTypographyProps: {
+          noWrap: true,
+        },
+      },
+    },
     MuiPaper: {
       defaultProps: {
         elevation: 0,
