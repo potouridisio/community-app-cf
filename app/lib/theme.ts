@@ -209,6 +209,13 @@ theme = createTheme(theme, {
       },
     },
   },
+  typography: {
+    h1: {
+      fontSize: '1.5rem',
+      fontWeight: 600,
+      lineHeight: 1.25,
+    },
+  },
 } as ThemeOptions);
 
 export default theme;
