@@ -53,6 +53,16 @@ theme = createTheme(theme, {
         disableScrollLock: true,
         keepMounted: true,
       },
+      styleOverrides: {
+        modal: {
+          '& > .MuiBackdrop-root': {
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          },
+        },
+        paper: {
+          boxShadow: 'none',
+        },
+      },
     },
     MuiIconButton: {
       defaultProps: {
