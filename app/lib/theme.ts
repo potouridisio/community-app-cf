@@ -64,6 +64,15 @@ theme = createTheme(theme, {
       defaultProps: {
         variant: 'middle',
       },
+      styleOverrides: {
+        middle: {
+          marginLeft: theme.spacing(3),
+          marginRight: theme.spacing(3),
+        },
+        root: {
+          borderColor: darkGrey[200],
+        },
+      },
     },
     MuiDrawer: {
       defaultProps: {
