@@ -1,6 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 import type { ThemeOptions } from '@mui/material/styles';
 
+import { blue, darkGrey } from './colors';
+
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
     '2xl': true;
@@ -49,6 +51,26 @@ theme = createTheme(theme, {
     MuiIconButton: {
       defaultProps: {
         disableRipple: true,
+      },
+      styleOverrides: {
+        edgeEnd: {
+          marginRight: theme.spacing(-0.5),
+        },
+        root: {
+          '&:hover, &.Mui-focusVisible:hover': {
+            backgroundColor: darkGrey[50],
+          },
+          '&.Mui-focusVisible': {
+            backgroundColor: darkGrey[100],
+            outline: `2px solid ${blue[700]}`,
+            outlineOffset: -2,
+          },
+          borderRadius: theme.shape.borderRadius,
+          color: 'inherit',
+        },
+        sizeSmall: {
+          padding: theme.spacing(0.5),
+        },
       },
     },
     MuiToolbar: {
