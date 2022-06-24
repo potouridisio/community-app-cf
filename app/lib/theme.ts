@@ -60,6 +60,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiDivider: {
+      defaultProps: {
+        variant: 'middle',
+      },
+    },
     MuiDrawer: {
       defaultProps: {
         disableScrollLock: true,
