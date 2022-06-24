@@ -1,9 +1,15 @@
+import account_details from '~/icons/account-details.svg';
 import activity_history from '~/icons/activity-history.svg';
+import arrow from '~/icons/arrow.svg';
+import my_account from '~/icons/my-account.svg';
 import redemptions from '~/icons/redemptions.svg';
 import refer_a_friend from '~/icons/refer-a-friend.svg';
 import rewards from '~/icons/rewards.svg';
 import surveys from '~/icons/surveys.svg';
+import { useState } from 'react';
 
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import type { ListProps } from '@mui/material/List';
@@ -51,6 +57,67 @@ export default function LeftNavigation(props: ListProps) {
         </ListItemIcon>
         <ListItemText primary="Activity history" />
       </ListItemButton>
+      <MyAccountListItemButton />
     </List>
+  );
+}
+
+function MyAccountListItemButton() {
+  const { pathname } = useLocation();
+  const [open, setOpen] = useState(pathname === '/account-details');
+
+  const handleToggle = () => {
+    setOpen((prev) => !prev);
+  };
+
+  return (
+    <>
+      <ListItemButton onClick={handleToggle}>
+        <ListItemIcon>
+          <img alt="My account icon" height="24" src={my_account} width="24" />
+        </ListItemIcon>
+        <ListItemText primary="My account" />
+        <Box
+          sx={{
+            display: 'inline-flex',
+            mr: -1,
+            transform: open ? 'rotate(180deg)' : undefined,
+          }}
+        >
+          <img alt="Arrow icon" height="24" src={arrow} width="24" />
+        </Box>
+      </ListItemButton>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List
+          component="div"
+          disablePadding
+          sx={{
+            '& > .MuiListItemButton-root': {
+              '&:before': {
+                left: 'auto',
+                right: 0,
+              },
+              pl: 5,
+            },
+          }}
+        >
+          <ListItemButton
+            component={NavLink}
+            selected={pathname === '/account-details'}
+            to="/account-details"
+          >
+            <ListItemIcon>
+              <img
+                alt="Account details icon"
+                height="24"
+                src={account_details}
+                width="24"
+              />
+            </ListItemIcon>
+            <ListItemText primary="Account details" />
+          </ListItemButton>
+        </List>
+      </Collapse>
+    </>
   );
 }
