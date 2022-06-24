@@ -46,6 +46,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiIconButton: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
     MuiToolbar: {
       defaultProps: {
         disableGutters: true,
