@@ -215,6 +215,10 @@ theme = createTheme(theme, {
       fontWeight: 600,
       lineHeight: 1.25,
     },
+    subtitle1: {
+      fontSize: '1.125rem',
+      lineHeight: 1.5,
+    },
   },
 } as ThemeOptions);
 
