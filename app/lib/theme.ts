@@ -94,6 +94,11 @@ theme = createTheme(theme, {
         elevation: 0,
         square: true,
       },
+      styleOverrides: {
+        root: {
+          color: 'inherit',
+        },
+      },
     },
     MuiToolbar: {
       defaultProps: {
