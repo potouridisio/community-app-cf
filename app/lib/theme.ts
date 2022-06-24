@@ -46,6 +46,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiToolbar: {
+      defaultProps: {
+        disableGutters: true,
+      },
+    },
   },
 } as ThemeOptions);
 
