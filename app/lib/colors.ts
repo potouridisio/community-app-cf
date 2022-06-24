@@ -10,4 +10,5 @@ export const darkGrey = {
   50: '#f7f7f7',
   100: '#eeeeee',
   200: '#dedede',
+  800: '#333333',
 } as const;

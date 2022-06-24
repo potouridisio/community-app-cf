@@ -53,6 +53,13 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          color: darkGrey[800],
+        },
+      },
+    },
     MuiDrawer: {
       defaultProps: {
         disableScrollLock: true,
