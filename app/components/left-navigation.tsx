@@ -1,3 +1,4 @@
+import redemptions from '~/icons/redemptions.svg';
 import rewards from '~/icons/rewards.svg';
 import surveys from '~/icons/surveys.svg';
 
@@ -16,6 +17,7 @@ export default function LeftNavigation(props: ListProps) {
       {[
         [surveys, 'Surveys', '/surveys'],
         [rewards, 'Rewards', '/rewards'],
+        [redemptions, 'Redemptions', '/redemptions'],
       ].map(([icon, primary, to]) => (
         <ListItemButton
           component={NavLink}
