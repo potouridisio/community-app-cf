@@ -89,6 +89,12 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiPaper: {
+      defaultProps: {
+        elevation: 0,
+        square: true,
+      },
+    },
     MuiToolbar: {
       defaultProps: {
         disableGutters: true,
