@@ -50,6 +50,11 @@ theme = createTheme(theme, {
       defaultProps: {
         disableGutters: true,
       },
+      styleOverrides: {
+        root: {
+          minHeight: 64,
+        },
+      },
     },
   },
 } as ThemeOptions);
