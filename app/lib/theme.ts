@@ -48,6 +48,12 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiDrawer: {
+      defaultProps: {
+        disableScrollLock: true,
+        keepMounted: true,
+      },
+    },
     MuiIconButton: {
       defaultProps: {
         disableRipple: true,
