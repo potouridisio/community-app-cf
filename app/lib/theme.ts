@@ -106,6 +106,40 @@ theme = createTheme(theme, {
       defaultProps: {
         disableRipple: true,
       },
+      styleOverrides: {
+        root: {
+          '&:before': {
+            bottom: 0,
+            left: 0,
+            position: 'absolute',
+            top: 0,
+            width: 4,
+            zIndex: -1,
+          },
+          '&:hover, &.Mui-focusVisible, &.Mui-selected, &.Mui-selected:hover, &.Mui-selected.Mui-focusVisible':
+            {
+              backgroundColor: 'transparent',
+            },
+          '&:hover:before': {
+            backgroundColor: darkGrey[200],
+          },
+          '&:hover:before, &.Mui-selected:before': {
+            content: '""',
+          },
+          '&.Mui-focusVisible': {
+            outline: `2px solid ${blue[700]}`,
+            outlineOffset: 0,
+          },
+          '&.Mui-selected:before': {
+            backgroundColor: theme.palette.primary.main,
+          },
+          flexGrow: 0,
+          minHeight: 56,
+          paddingLeft: theme.spacing(3),
+          paddingRight: theme.spacing(3),
+          zIndex: 0,
+        },
+      },
     },
     MuiPaper: {
       defaultProps: {

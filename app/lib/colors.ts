@@ -9,4 +9,5 @@ export const brightTeal = {
 export const darkGrey = {
   50: '#f7f7f7',
   100: '#eeeeee',
+  200: '#dedede',
 } as const;
