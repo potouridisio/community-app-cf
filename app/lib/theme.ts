@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import type { ThemeOptions } from '@mui/material/styles';
 
-import { blue, darkGrey } from './colors';
+import { blue, brightTeal, darkGrey } from './colors';
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
@@ -18,6 +18,11 @@ let theme = createTheme({
       lg: 1024,
       xl: 1280,
       '2xl': 1440,
+    },
+  },
+  palette: {
+    primary: {
+      main: brightTeal[200],
     },
   },
   typography: {

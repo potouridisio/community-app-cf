@@ -2,6 +2,10 @@ export const blue = {
   700: '#0075ff',
 } as const;
 
+export const brightTeal = {
+  200: '#20d6c9',
+} as const;
+
 export const darkGrey = {
   50: '#f7f7f7',
   100: '#eeeeee',
