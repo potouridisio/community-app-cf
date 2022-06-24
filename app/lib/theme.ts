@@ -162,6 +162,18 @@ theme = createTheme(theme, {
           noWrap: true,
         },
       },
+      styleOverrides: {
+        root: {
+          '&:not(:last-child)': {
+            paddingRight: theme.spacing(2),
+          },
+          marginBottom: 0,
+          marginTop: 0,
+        },
+        primary: {
+          fontWeight: 600,
+        },
+      },
     },
     MuiPaper: {
       defaultProps: {
