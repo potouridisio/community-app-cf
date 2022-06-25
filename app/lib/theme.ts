@@ -1,3 +1,5 @@
+import ArrowIcon from '~/components/arrow-icon';
+
 import { createTheme } from '@mui/material/styles';
 import type { ThemeOptions } from '@mui/material/styles';
 
@@ -298,6 +300,11 @@ theme = createTheme(theme, {
         root: {
           color: 'inherit',
         },
+      },
+    },
+    MuiSelect: {
+      defaultProps: {
+        IconComponent: ArrowIcon,
       },
     },
     MuiToolbar: {
