@@ -95,6 +95,17 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          fontSize: '0.875rem',
+          fontWeight: 600,
+          lineHeight: 1.5,
+          marginLeft: 0,
+          marginRight: 0,
+        },
+      },
+    },
     MuiIconButton: {
       defaultProps: {
         disableRipple: true,
