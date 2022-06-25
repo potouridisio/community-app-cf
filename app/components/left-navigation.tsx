@@ -1,6 +1,7 @@
 import account_details from '~/icons/account-details.svg';
 import activity_history from '~/icons/activity-history.svg';
 import arrow from '~/icons/arrow.svg';
+import close_account from '~/icons/close-account.svg';
 import my_account from '~/icons/my-account.svg';
 import my_saved_data from '~/icons/my-saved-data.svg';
 import redemptions from '~/icons/redemptions.svg';
@@ -66,7 +67,7 @@ export default function LeftNavigation(props: ListProps) {
 function MyAccountListItemButton() {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(
-    ['/account-details', '/my-saved-data'].includes(pathname)
+    ['/account-details', '/close-account', '/my-saved-data'].includes(pathname)
   );
 
   const handleToggle = () => {
@@ -107,6 +108,7 @@ function MyAccountListItemButton() {
           {[
             [account_details, 'Account details', '/account-details'],
             [my_saved_data, 'My saved data', '/my-saved-data'],
+            [close_account, 'Close account', '/close-account'],
           ].map(([icon, primary, to]) => (
             <ListItemButton
               component={NavLink}
