@@ -119,6 +119,21 @@ theme = createTheme(theme, {
       defaultProps: {
         error: false,
       },
+      styleOverrides: {
+        root: {
+          '&, &.Mui-focused': {
+            color: darkGrey[500],
+          },
+          lineHeight: '1.5em',
+          transform: 'translate(16px, 12px) scale(1)',
+        },
+        shrink: {
+          transform: 'translate(16px, -10.5px) scale(0.875)',
+        },
+        sizeSmall: {
+          transform: 'translate(16px, 8px) scale(1)',
+        },
+      },
     },
     MuiLink: {
       styleOverrides: {
