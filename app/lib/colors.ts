@@ -7,7 +7,10 @@ export const blue = {
 } as const;
 
 export const brightTeal = {
+  50: '#95e7e1',
+  100: '#5cdfd5',
   200: '#20d6c9',
+  300: '#2cc8bc ',
 } as const;
 
 export const coolGrey = {

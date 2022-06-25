@@ -57,6 +57,92 @@ theme = createTheme(theme, {
       defaultProps: {
         disableRipple: true,
       },
+      styleOverrides: {
+        contained: {
+          '&, &:active, &:hover, &.Mui-focusVisible': {
+            boxShadow: 'none',
+          },
+          '&:hover, &.Mui-focusVisible:hover': {
+            backgroundColor: brightTeal[100],
+          },
+          '&.Mui-disabled': {
+            backgroundColor: brightTeal[50],
+            color: darkGrey[400],
+          },
+          '&.Mui-focusVisible': {
+            backgroundColor: brightTeal[300],
+          },
+          backgroundColor: theme.palette.primary.main,
+        },
+        endIcon: {
+          '& > *:nth-of-type(1)': {
+            fontSize: '1.5rem',
+          },
+          marginLeft: theme.spacing(1.5),
+          marginRight: theme.spacing(-1),
+        },
+        outlined: {
+          '&:hover': {
+            backgroundColor: theme.palette.secondary.main,
+            borderColor: darkGrey[800],
+            color: theme.palette.secondary.contrastText,
+          },
+          '&.Mui-disabled': {
+            borderColor: darkGrey[200],
+            color: darkGrey[400],
+          },
+          backgroundColor: theme.palette.common.white,
+          borderColor: darkGrey[800],
+        },
+        outlinedSizeLarge: {
+          padding: '11px 15px',
+        },
+        outlinedSizeMedium: {
+          padding: '7px 15px',
+        },
+        outlinedSizeSmall: {
+          padding: '3px 15px',
+        },
+        root: {
+          '&.Mui-focusVisible': {
+            outline: `2px solid ${blue[700]}`,
+            outlineOffset: -2,
+          },
+          color: 'inherit',
+          fontSize: '1rem',
+          fontWeight: 600,
+          lineHeight: 1.5,
+          textTransform: 'none',
+        },
+        sizeLarge: {
+          padding: theme.spacing(1.5, 2),
+        },
+        sizeMedium: {
+          padding: theme.spacing(1, 2),
+        },
+        sizeSmall: {
+          padding: theme.spacing(0.5, 2),
+        },
+        startIcon: {
+          '& > *:nth-of-type(1)': {
+            fontSize: '1.5rem',
+          },
+          marginLeft: theme.spacing(-1),
+          marginRight: theme.spacing(1.5),
+        },
+        text: {
+          '&:hover, &.Mui-focusVisible:hover': {
+            backgroundColor: darkGrey[50],
+          },
+          '&.Mui-disabled': {
+            backgroundColor: darkGrey[100],
+            color: darkGrey[400],
+          },
+          '&.Mui-focusVisible': {
+            backgroundColor: darkGrey[100],
+          },
+        },
+      },
     },
     MuiContainer: {
       defaultProps: {
