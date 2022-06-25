@@ -252,6 +252,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiMenuItem: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
     MuiOutlinedInput: {
       defaultProps: {
         error: false,
