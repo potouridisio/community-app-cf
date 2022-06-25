@@ -1,3 +1,5 @@
+import LoginForm from '~/components/login-form';
+
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
@@ -19,7 +21,7 @@ export default function Login() {
       <Typography sx={{ mb: 5, textAlign: 'center' }}>
         Login to earn rewards!
       </Typography>
-      {/* login form  */}
+      <LoginForm />
       <Typography
         component="div"
         sx={{ fontWeight: 600, textAlign: 'center' }}
