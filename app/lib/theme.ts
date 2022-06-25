@@ -458,6 +458,11 @@ theme = createTheme(theme, {
       defaultProps: {
         disableScrollLock: true,
       },
+      styleOverrides: {
+        paper: {
+          boxShadow: '0px 4px 4px rgb(0, 0, 0, 0.2)',
+        },
+      },
     },
     MuiSelect: {
       defaultProps: {
