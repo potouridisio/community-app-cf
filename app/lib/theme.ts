@@ -53,6 +53,11 @@ theme = createTheme(theme, {
         position: 'sticky',
       },
     },
+    MuiButton: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
     MuiContainer: {
       defaultProps: {
         maxWidth: '2xl',
