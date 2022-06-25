@@ -18,10 +18,16 @@ import type { ListProps } from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { NavLink, useLocation } from '@remix-run/react';
+
+import RightNavigation from './right-navigation';
 
 export default function LeftNavigation(props: ListProps) {
   const { pathname } = useLocation();
+  const theme = useTheme();
+  const downLg = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <List component="nav" {...props}>
@@ -60,6 +66,17 @@ export default function LeftNavigation(props: ListProps) {
         <ListItemText primary="Activity history" />
       </ListItemButton>
       <MyAccountListItemButton />
+      {downLg ? (
+        <>
+          <Divider sx={{ my: 2 }} />
+          <RightNavigation
+            component="div"
+            ListComponent="div"
+            ListComponentProps={{ disablePadding: true }}
+            sx={{ flexGrow: 1 }}
+          />
+        </>
+      ) : null}
     </List>
   );
 }

@@ -1,6 +1,7 @@
 import logo from '~/logo.svg';
 import LeftNavigation from '~/components/left-navigation';
 import ResponsiveDrawer from '~/components/responsive-drawer';
+import RightNavigation from '~/components/right-navigation';
 import { darkGrey } from '~/lib/colors';
 
 import AppBar from '@mui/material/AppBar';
@@ -8,6 +9,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import MuiLink from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -15,6 +17,7 @@ import { Link, Outlet } from '@remix-run/react';
 
 export default function Community() {
   const theme = useTheme();
+  const onlyLg = useMediaQuery(theme.breakpoints.only('lg'));
   const upLg = useMediaQuery(theme.breakpoints.up('lg'));
   const upXl = useMediaQuery(theme.breakpoints.up('xl'));
 
@@ -49,11 +52,16 @@ export default function Community() {
           <Grid container spacing={{ lg: 4, xs: 3 }}>
             {upLg ? (
               <Grid item xs="auto">
-                <Box sx={{ position: 'sticky', top: 96 }}>
+                <Stack spacing={4} sx={{ position: 'sticky', top: 96 }}>
                   <Box sx={{ bgcolor: 'background.paper', width: 240 }}>
                     <LeftNavigation />
                   </Box>
-                </Box>
+                  {onlyLg ? (
+                    <RightNavigation
+                      sx={{ bgcolor: 'background.paper', width: 240 }}
+                    />
+                  ) : null}
+                </Stack>
               </Grid>
             ) : null}
             <Grid item xs>
@@ -61,7 +69,11 @@ export default function Community() {
             </Grid>
             {upXl ? (
               <Grid item xs="auto">
-                {/*  */}
+                <Box sx={{ position: 'sticky', top: 96 }}>
+                  <RightNavigation
+                    sx={{ bgcolor: 'background.paper', width: 240 }}
+                  />
+                </Box>
               </Grid>
             ) : null}
           </Grid>
