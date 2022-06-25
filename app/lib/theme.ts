@@ -224,6 +224,9 @@ theme = createTheme(theme, {
     },
   },
   typography: {
+    body2: {
+      lineHeight: 1.5,
+    },
     h1: {
       fontSize: '1.5rem',
       fontWeight: 600,
