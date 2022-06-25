@@ -454,6 +454,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiPopover: {
+      defaultProps: {
+        disableScrollLock: true,
+      },
+    },
     MuiSelect: {
       defaultProps: {
         IconComponent: ArrowIcon,
