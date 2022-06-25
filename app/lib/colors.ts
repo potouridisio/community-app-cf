@@ -10,6 +10,10 @@ export const brightTeal = {
   200: '#20d6c9',
 } as const;
 
+export const coolGrey = {
+  700: '#475369',
+} as const;
+
 export const crimson = {
   600: '#f22c44',
 } as const;
