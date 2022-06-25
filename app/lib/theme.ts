@@ -306,6 +306,18 @@ theme = createTheme(theme, {
       defaultProps: {
         IconComponent: ArrowIcon,
       },
+      styleOverrides: {
+        icon: {
+          fill: darkGrey[400],
+          right: theme.spacing(1.5),
+        },
+        select: {
+          '&.MuiInputBase-input.MuiOutlinedInput-input': {
+            paddingRight: theme.spacing(6),
+          },
+          minHeight: '1.5em',
+        },
+      },
     },
     MuiToolbar: {
       defaultProps: {
