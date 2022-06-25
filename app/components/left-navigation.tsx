@@ -2,6 +2,7 @@ import account_details from '~/icons/account-details.svg';
 import activity_history from '~/icons/activity-history.svg';
 import arrow from '~/icons/arrow.svg';
 import close_account from '~/icons/close-account.svg';
+import logout from '~/icons/logout.svg';
 import my_account from '~/icons/my-account.svg';
 import my_saved_data from '~/icons/my-saved-data.svg';
 import redemptions from '~/icons/redemptions.svg';
@@ -77,6 +78,13 @@ export default function LeftNavigation(props: ListProps) {
           />
         </>
       ) : null}
+      <Divider sx={{ my: 2 }} />
+      <ListItemButton>
+        <ListItemIcon>
+          <img alt="Logout icon" height="24" src={logout} width="24" />
+        </ListItemIcon>
+        <ListItemText primary="Logout" />
+      </ListItemButton>
     </List>
   );
 }
