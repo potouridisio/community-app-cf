@@ -3,7 +3,7 @@ import ArrowIcon from '~/components/arrow-icon';
 import { createTheme } from '@mui/material/styles';
 import type { ThemeOptions } from '@mui/material/styles';
 
-import { aegean, blue, brightTeal, darkGrey } from './colors';
+import { aegean, blue, brightTeal, crimson, darkGrey } from './colors';
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
@@ -23,6 +23,9 @@ let theme = createTheme({
     },
   },
   palette: {
+    error: {
+      main: crimson[600],
+    },
     primary: {
       main: brightTeal[200],
     },
