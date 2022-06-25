@@ -2,6 +2,7 @@ import logo from '~/logo.svg';
 import LeftNavigation from '~/components/left-navigation';
 import ResponsiveDrawer from '~/components/responsive-drawer';
 import RightNavigation from '~/components/right-navigation';
+import TotalPointsPopover from '~/components/total-points-popover';
 import { darkGrey } from '~/lib/colors';
 
 import AppBar from '@mui/material/AppBar';
@@ -44,6 +45,8 @@ export default function Community() {
             >
               <img alt="Pureprofile logo" height="36" src={logo} width="156" />
             </MuiLink>
+            <Box sx={{ flexGrow: 1 }} />
+            <TotalPointsPopover />
           </Toolbar>
         </Container>
       </AppBar>

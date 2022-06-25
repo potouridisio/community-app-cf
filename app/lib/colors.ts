@@ -29,3 +29,7 @@ export const darkGrey = {
   500: '#8b8b8b',
   800: '#333333',
 } as const;
+
+export const darkTeal = {
+  800: '#2ba8a6',
+} as const;
