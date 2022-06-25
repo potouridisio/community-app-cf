@@ -471,6 +471,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiTextField: {
+      defaultProps: {
+        size: 'small',
+      },
+    },
     MuiToolbar: {
       defaultProps: {
         disableGutters: true,
