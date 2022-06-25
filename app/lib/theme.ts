@@ -227,6 +227,9 @@ theme = createTheme(theme, {
     body2: {
       lineHeight: 1.5,
     },
+    caption: {
+      lineHeight: 1.5,
+    },
     h1: {
       fontSize: '1.5rem',
       fontWeight: 600,
