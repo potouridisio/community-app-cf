@@ -221,6 +221,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiOutlinedInput: {
+      defaultProps: {
+        error: false,
+      },
+    },
     MuiPaper: {
       defaultProps: {
         elevation: 0,
