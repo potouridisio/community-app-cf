@@ -3,7 +3,7 @@ import ArrowIcon from '~/components/arrow-icon';
 import { createTheme } from '@mui/material/styles';
 import type { ThemeOptions } from '@mui/material/styles';
 
-import { blue, brightTeal, darkGrey } from './colors';
+import { aegean, blue, brightTeal, darkGrey } from './colors';
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
@@ -255,6 +255,25 @@ theme = createTheme(theme, {
     MuiMenuItem: {
       defaultProps: {
         disableRipple: true,
+      },
+      styleOverrides: {
+        root: {
+          '&:hover, &.Mui-focusVisible:hover, &.Mui-selected:hover, &.Mui-selected.Mui-focusVisible:hover':
+            {
+              backgroundColor: aegean[200],
+            },
+          '&.Mui-focusVisible': {
+            outline: `2px solid ${blue[700]}`,
+            outlineOffset: -2,
+          },
+          '&.Mui-focusVisible, &.Mui-selected, &.Mui-selected.Mui-focusVisible':
+            {
+              backgroundColor: 'transparent',
+            },
+          minHeight: 'auto',
+          paddingBottom: theme.spacing(1),
+          paddingTop: theme.spacing(1),
+        },
       },
     },
     MuiOutlinedInput: {

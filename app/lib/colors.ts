@@ -1,3 +1,7 @@
+export const aegean = {
+  200: '#deeef8',
+} as const;
+
 export const blue = {
   700: '#0075ff',
 } as const;
