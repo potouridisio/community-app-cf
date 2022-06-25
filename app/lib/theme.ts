@@ -115,6 +115,22 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiInputAdornment: {
+      styleOverrides: {
+        positionEnd: {
+          '&.MuiInputAdornment-sizeMedium': {
+            right: theme.spacing(1),
+          },
+          '&.MuiInputAdornment-sizeSmall': {
+            right: theme.spacing(1.5),
+          },
+        },
+        root: {
+          color: darkGrey[400],
+          position: 'absolute',
+        },
+      },
+    },
     MuiInputLabel: {
       defaultProps: {
         error: false,
