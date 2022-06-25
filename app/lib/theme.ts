@@ -225,6 +225,53 @@ theme = createTheme(theme, {
       defaultProps: {
         error: false,
       },
+      styleOverrides: {
+        input: {
+          '&:-webkit-autofill': {
+            boxShadow: `0 0 0 100px ${theme.palette.background.paper} inset`,
+            fontSize: '1rem',
+            WebkitTextFillColor: darkGrey[800],
+          },
+          '&::placeholder': {
+            color: darkGrey[400],
+            opacity: 1,
+          },
+          height: '1.5em',
+          padding: theme.spacing(1.5, 2),
+        },
+        inputSizeSmall: {
+          padding: theme.spacing(1, 2),
+        },
+        notchedOutline: {
+          borderColor: darkGrey[400],
+          padding: '0 11px',
+          top: -6,
+        },
+        root: {
+          '&:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: darkGrey[800],
+          },
+          // label !== undefined
+          '&:not(:only-child) > .MuiOutlinedInput-notchedOutline > legend': {
+            '& > span': {
+              paddingLeft: theme.spacing(0.5),
+              paddingRight: theme.spacing(0.5),
+            },
+            fontSize: '0.875em',
+            height: 13,
+          },
+          // label === undefined
+          '&:only-child > .MuiOutlinedInput-notchedOutline > legend': {
+            lineHeight: '13px',
+          },
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: blue[700],
+            padding: '0 10px',
+          },
+          color: 'inherit',
+          lineHeight: 1.5,
+        },
+      },
     },
     MuiPaper: {
       defaultProps: {
