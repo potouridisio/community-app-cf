@@ -115,6 +115,11 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiInputLabel: {
+      defaultProps: {
+        error: false,
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {
