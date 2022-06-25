@@ -239,6 +239,19 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiMenu: {
+      styleOverrides: {
+        list: {
+          paddingBottom: theme.spacing(1),
+          paddingTop: theme.spacing(1),
+        },
+        root: {
+          '& .MuiMenu-paper': {
+            boxShadow: '5px 10px 20px rgba(0, 0, 0, 0.2)',
+          },
+        },
+      },
+    },
     MuiOutlinedInput: {
       defaultProps: {
         error: false,
