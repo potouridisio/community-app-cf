@@ -1,3 +1,4 @@
+import { ThemeProvider } from '@mui/material/styles';
 import type { LinksFunction, MetaFunction } from '@remix-run/cloudflare';
 import {
   Links,
@@ -7,6 +8,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+
+import theme from './lib/theme';
 
 export const links: LinksFunction = () => {
   return [
@@ -32,7 +35,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <ThemeProvider theme={theme}>
+          <Outlet />
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
