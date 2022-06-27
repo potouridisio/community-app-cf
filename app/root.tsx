@@ -1,3 +1,4 @@
+import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import type { LinksFunction, MetaFunction } from '@remix-run/cloudflare';
 import {
@@ -36,6 +37,7 @@ export default function App() {
       </head>
       <body>
         <ThemeProvider theme={theme}>
+          <CssBaseline />
           <Outlet />
         </ThemeProvider>
         <ScrollRestoration />
