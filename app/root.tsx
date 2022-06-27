@@ -19,6 +19,19 @@ export const links: LinksFunction = () => {
       rel: 'icon',
       type: 'image/svg+xml',
     },
+    {
+      href: 'https://fonts.googleapis.com',
+      rel: 'preconnect',
+    },
+    {
+      crossOrigin: 'anonymous',
+      href: 'https://fonts.gstatic.com',
+      rel: 'preconnect',
+    },
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap',
+      rel: 'stylesheet',
+    },
   ];
 };
 
